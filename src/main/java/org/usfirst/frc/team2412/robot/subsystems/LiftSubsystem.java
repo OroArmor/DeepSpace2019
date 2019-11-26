@@ -24,7 +24,7 @@ public class LiftSubsystem extends Subsystem {
 
 	// Ratios
 	InterUnitRatio<DistanceUnits, DistanceUnits> pullyRatio = new InterUnitRatio<DistanceUnits, DistanceUnits>(
-			DistanceUnits.INCH, 2, DistanceUnits.INCH);
+			DistanceUnits.INCH, 1, DistanceUnits.INCH);
 
 	InterUnitRatio<RotationUnits, DistanceUnits> outputRotationsToOutputGearRadius = new InterUnitRatio<RotationUnits, DistanceUnits>(
 			RotationUnits.ROTATION, outputGearCircumference.getValue(), DistanceUnits.INCH);
@@ -32,7 +32,7 @@ public class LiftSubsystem extends Subsystem {
 	InterUnitRatio<RotationUnits, DistanceUnits> outputRotationsToInches = new InterUnitRatio<RotationUnits, DistanceUnits>(
 			outputRotationsToOutputGearRadius, pullyRatio);
 
-	InterUnitRatio<RotationUnits, DistanceUnits> motorRotationsToInches = new InterUnitRatio<RotationUnits, DistanceUnits>(
+	public InterUnitRatio<RotationUnits, DistanceUnits> motorRotationsToInches = new InterUnitRatio<RotationUnits, DistanceUnits>(
 			liftGearbox.getRatio(), outputRotationsToInches);
 
 	// Subsystem
@@ -55,7 +55,8 @@ public class LiftSubsystem extends Subsystem {
 	}
 
 	public double getInches() {
-		return liftDistanceSubsystem.getError().add(inchOffset).getValue();
+		double inches = liftDistanceSubsystem.getError().add(inchOffset).getValue();
+		return inches;
 	}
 
 	@Override

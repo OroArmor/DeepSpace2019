@@ -32,10 +32,11 @@ public class DistanceSubsystem<T extends PIDMotorController<?>> implements PIDSu
 	public Distance getError() {
 		Distance totalDistance = new Distance(0);
 		for (T motor : motors) {
-			totalDistance.add(new Distance(rotationsToDistance.calculateReverseRatio(motor.getRotations())));
+			Distance motorDistance = new Distance(rotationsToDistance.calculateReverseRatio(motor.getRotations()));
+			totalDistance = totalDistance.add(motorDistance);
 		}
-		totalDistance.divide(new Distance(motors.length));
-		return currentReference.subtract(totalDistance);
+		totalDistance = totalDistance.divide(new Distance(motors.length));
+		return totalDistance.subtract(currentReference);
 	}
 
 	@Override

@@ -19,6 +19,7 @@ public class PIDCanSparkMax extends CANSparkMax implements PIDMotorController<Sp
 		super(deviceID, type);
 		this.encoder = this.getEncoder();
 		this.controller = new PIDController(constants);
+		this.controller.setMinMax(-0.5, 0.5);
 	}
 
 	@Override
@@ -48,7 +49,8 @@ public class PIDCanSparkMax extends CANSparkMax implements PIDMotorController<Sp
 
 	@Override
 	public SparkMaxRotations getRotations() {
-		return new SparkMaxRotations(encoder.getPosition());
+		SparkMaxRotations rots = new SparkMaxRotations(encoder.getPosition());
+		return rots;
 	}
 
 	@Override
