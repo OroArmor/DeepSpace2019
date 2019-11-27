@@ -1,7 +1,5 @@
 package org.usfirst.frc.team2412.robot;
 
-import com.robototes.motors.PIDCanSparkMax;
-
 import org.usfirst.frc.team2412.robot.commands.CommandBase;
 
 import edu.wpi.first.wpilibj.TimedRobot;
