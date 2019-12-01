@@ -62,4 +62,27 @@ public class LiftSubsystem extends Subsystem {
 	@Override
 	protected void initDefaultCommand() {
 	}
+
+	public static enum LiftHeights {
+		HATCH1(new Distance(19, DistanceUnits.INCH), 1), //
+		HATCH2(new Distance(19, DistanceUnits.INCH), 2), //
+		HATCH3(new Distance(19, DistanceUnits.INCH), 3), //
+		CARGO1(new Distance(27.5, DistanceUnits.INCH), 1), //
+		CARGO2(new Distance(27.5, DistanceUnits.INCH), 2), //
+		CARGO3(new Distance(27.5, DistanceUnits.INCH), 3); //
+
+		private final Distance increment = new Distance(28, DistanceUnits.INCH);
+
+		public final Distance inch;
+		public final int level;
+
+		private LiftHeights(Distance inch, int level) {
+			this.inch = inch;
+			this.level = level;
+		}
+
+		public Distance getInch() {
+			return inch.add(increment.multiply(new Distance(level - 1)));
+		}
+	}
 }

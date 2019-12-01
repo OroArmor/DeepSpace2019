@@ -8,9 +8,7 @@
 package org.usfirst.frc.team2412.robot;
 
 import org.usfirst.frc.team2412.robot.commands.LiftSetInchCommand;
-
-import com.robototes.units.Distance;
-import com.robototes.units.UnitTypes.DistanceUnits;
+import org.usfirst.frc.team2412.robot.subsystems.LiftSubsystem.LiftHeights;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -30,13 +28,13 @@ public class OI {
 	Button hatch3 = new JoystickButton(driver, 8);
 
 	public OI() {
-		cargo1.whenPressed(new LiftSetInchCommand(new Distance(27.5, DistanceUnits.INCH), 0.01));
-		cargo2.whenPressed(new LiftSetInchCommand(new Distance(27.5 + 28 * 1, DistanceUnits.INCH), 0.01));
-		cargo3.whenPressed(new LiftSetInchCommand(new Distance(27.5 + 28 * 2, DistanceUnits.INCH), 0.01));
+		cargo1.whenPressed(new LiftSetInchCommand(LiftHeights.CARGO1, 0.1));
+		cargo2.whenPressed(new LiftSetInchCommand(LiftHeights.CARGO2, 0.1));
+		cargo3.whenPressed(new LiftSetInchCommand(LiftHeights.CARGO3, 0.1));
 
-		hatch1.whenPressed(new LiftSetInchCommand(new Distance(19, DistanceUnits.INCH), 0.01));
-		hatch2.whenPressed(new LiftSetInchCommand(new Distance(19 + 28 * 1, DistanceUnits.INCH), 0.01));
-		hatch3.whenPressed(new LiftSetInchCommand(new Distance(19 + 28 * 2, DistanceUnits.INCH), 0.01));
+		hatch1.whenPressed(new LiftSetInchCommand(LiftHeights.HATCH1, 0.1));
+		hatch2.whenPressed(new LiftSetInchCommand(LiftHeights.HATCH2, 0.1));
+		hatch3.whenPressed(new LiftSetInchCommand(LiftHeights.HATCH3, 0.1));
 	}
 
 }
