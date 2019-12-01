@@ -5,7 +5,7 @@ import com.robototes.control.PIDSetCommand;
 import com.robototes.motors.PIDCanSparkMax;
 import com.robototes.units.Distance;
 
-public class LiftSetInchCommand extends PIDSetCommand<PIDCanSparkMax, Distance> {
+public class LiftSetInchCommand extends PIDSetCommand<Distance> {
 	static DistanceSubsystem<PIDCanSparkMax> PIDSubsystem = CommandBase.liftSubsystem.liftDistanceSubsystem;
 
 	public LiftSetInchCommand(Distance setPositionUnit, double howCloseMustItBe) {

@@ -11,8 +11,6 @@ public class Robot extends TimedRobot {
 
 	CommandBase base = new CommandBase();
 
-	public static long startTime = 0;
-
 	/**
 	 * This function is run when the robot is first started up and should be used
 	 * for any initialization code.
@@ -29,21 +27,7 @@ public class Robot extends TimedRobot {
 	}
 
 	@Override
-	public void teleopInit() {
-	}
-
-	@Override
 	public void teleopPeriodic() {
 		controlledPeriodic();
 	}
-
-	@Override
-	public void autonomousInit() {
-	}
-
-	@Override
-	public void autonomousPeriodic() {
-		controlledPeriodic();
-	}
-
 }
