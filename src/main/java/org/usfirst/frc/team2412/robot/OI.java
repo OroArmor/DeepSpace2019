@@ -16,13 +16,17 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
 public class OI {
 
+	// Main driver joystick
 	Joystick driver = new Joystick(0);
-	Button trigger = new JoystickButton(driver, 1);
 
+	// Buttons for cargo positions, the left side of the six buttons on the base of
+	// the controller
 	Button cargo1 = new JoystickButton(driver, 11);
 	Button cargo2 = new JoystickButton(driver, 9);
 	Button cargo3 = new JoystickButton(driver, 7);
 
+	// Buttons for hatch positions, the right side of the six buttons on the base of
+	// the controller
 	Button hatch1 = new JoystickButton(driver, 12);
 	Button hatch2 = new JoystickButton(driver, 10);
 	Button hatch3 = new JoystickButton(driver, 8);

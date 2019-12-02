@@ -7,8 +7,10 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 
 public class Robot extends TimedRobot {
 
+	// OI for the robot
 	public static OI m_oi;
 
+	// Create a command base to house instances of each subsystem
 	CommandBase base = new CommandBase();
 
 	/**
@@ -17,7 +19,10 @@ public class Robot extends TimedRobot {
 	 */
 	@Override
 	public void robotInit() {
+		// Create an new OI
 		m_oi = new OI();
+
+		// Have the second lift motor follow the first motor
 		RobotMap.liftMotors[1].follow(RobotMap.liftMotors[0]);
 	}
 

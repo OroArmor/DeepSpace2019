@@ -13,14 +13,18 @@ import com.robototes.motors.PIDCanSparkMax;
 
 public class RobotMap {
 
+	// The PID constants used for lift
 	static double P = 0.015;
 	static double I = 0;
 	static double D = 0;
 
+	// kI_DAMP is set to zero as kI is not used
 	static PIDConstants liftConstants = new PIDConstants(P, I, D, 0);
 
+	// Can IDs of the lift motors
 	public static int[] liftMotorIndexes = { 7, 8 };
 
+	// Lift motors
 	public static PIDCanSparkMax[] liftMotors = {
 			new PIDCanSparkMax(liftMotorIndexes[0], MotorType.kBrushless, liftConstants),
 			new PIDCanSparkMax(liftMotorIndexes[1], MotorType.kBrushless, liftConstants) };
