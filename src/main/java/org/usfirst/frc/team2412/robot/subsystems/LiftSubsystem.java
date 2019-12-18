@@ -19,7 +19,7 @@ public class LiftSubsystem extends Subsystem {
 
 	// Some constants needed
 	// Middle of lift gets a minimum of 19 inches above the ground
-	public Distance inchOffset = new Distance(19, DistanceUnits.INCH);
+	public static Distance inchOffset = new Distance(19, DistanceUnits.INCH);
 
 	// The radius of the output "gear" is 0.75 inches
 	public Distance outputGearRadius = new Distance(0.75, DistanceUnits.INCH);
@@ -28,7 +28,7 @@ public class LiftSubsystem extends Subsystem {
 	public Distance outputGearCircumference = outputGearRadius.multiply(new Distance(2 * Math.PI));
 
 	// The gearbox for lift, with a ratio of 9.52
-	public Gearbox liftGearbox = new Gearbox(new MotorRotations.SparkMaxRotations(0), 9.52, new Rotations(0));
+	public Gearbox liftGearbox = new Gearbox(new MotorRotations.SparkMaxRotations(0), 1/ 9.52, new Rotations(0));
 
 	// Ratios
 	// One inch of string pulled by the pulley is two inches that lift moves
@@ -55,6 +55,7 @@ public class LiftSubsystem extends Subsystem {
 
 	// Constructor, no parameters are needed
 	public LiftSubsystem() {
+		System.out.println(motorRotationsToInches);
 	}
 
 	// Moves the lift up
@@ -113,7 +114,7 @@ public class LiftSubsystem extends Subsystem {
 
 		// Returns the distance from the ground to the level
 		public Distance getInch() {
-			return inch.add(increment.multiply(new Distance(level - 1)));
+			return inch.add(increment.multiply(new Distance(level - 1))).subtract(LiftSubsystem.inchOffset);
 		}
 	}
 }
