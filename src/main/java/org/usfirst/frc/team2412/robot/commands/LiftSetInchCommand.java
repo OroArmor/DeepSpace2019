@@ -3,11 +3,11 @@ package org.usfirst.frc.team2412.robot.commands;
 import org.usfirst.frc.team2412.robot.subsystems.LiftSubsystem.LiftHeights;
 
 import com.robototes.control.DistanceSubsystem;
-import com.robototes.control.UsePIDCommand;
+import com.robototes.control.UsePIDSetCommand;
 import com.robototes.motors.PIDCanSparkMax;
 import com.robototes.units.Distance;
 
-public class LiftSetInchCommand extends UsePIDCommand<Distance> {
+public class LiftSetInchCommand extends UsePIDSetCommand<Distance> {
 
 	// The PID subsystem of the lift subsystem
 	static DistanceSubsystem<PIDCanSparkMax> PIDSubsystem = CommandBase.liftSubsystem.liftDistanceSubsystem;
