@@ -28,7 +28,7 @@ public class LiftSubsystem extends Subsystem {
 	public Distance outputGearCircumference = outputGearRadius.multiply(new Distance(2 * Math.PI));
 
 	// The gearbox for lift, with a ratio of 9.52
-	public Gearbox liftGearbox = new Gearbox(new MotorRotations.SparkMaxRotations(0), 9.52, new Rotations(0));
+	public Gearbox liftGearbox = new Gearbox(new MotorRotations.SparkMaxRotations(0), 1d / 9.52, new Rotations(0));
 
 	// Ratios
 	// One inch of string pulled by the pulley is two inches that lift moves

@@ -9,7 +9,6 @@
 	<classpathentry kind="src" path="library/src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
 	<classpathentry kind="lib" path="src/libs/wpiapi-java-5.12.1.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="lib" path="src/libs/api-java-5.12.1.jar"/>
 	<classpathentry kind="lib" path="src/libs/cameraserver-java-2019.1.1.jar"/>
 	<classpathentry kind="lib" path="src/libs/cscore-java-2019.1.1.jar"/>
@@ -21,5 +20,6 @@
 	<classpathentry kind="lib" path="src/libs/SparkMax-java-1.0.27.jar"/>
 	<classpathentry kind="lib" path="src/libs/wpilibj-java-2019.1.1.jar"/>
 	<classpathentry kind="lib" path="src/libs/wpiutil-java-2019.1.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>
