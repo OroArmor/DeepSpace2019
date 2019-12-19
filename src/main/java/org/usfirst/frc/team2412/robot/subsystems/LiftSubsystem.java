@@ -19,7 +19,7 @@ public class LiftSubsystem extends Subsystem {
 
 	// Some constants needed
 	// Middle of lift gets a minimum of 19 inches above the ground
-	public Distance inchOffset = new Distance(19, DistanceUnits.INCH);
+	public static Distance inchOffset = new Distance(19, DistanceUnits.INCH);
 
 	// The radius of the output "gear" is 0.75 inches
 	public Distance outputGearRadius = new Distance(0.75, DistanceUnits.INCH);
@@ -55,6 +55,7 @@ public class LiftSubsystem extends Subsystem {
 
 	// Constructor, no parameters are needed
 	public LiftSubsystem() {
+		System.out.println(motorRotationsToInches);
 	}
 
 	// Moves the lift up
@@ -113,7 +114,7 @@ public class LiftSubsystem extends Subsystem {
 
 		// Returns the distance from the ground to the level
 		public Distance getInch() {
-			return inch.add(increment.multiply(new Distance(level - 1)));
+			return inch.add(increment.multiply(new Distance(level - 1))).subtract(LiftSubsystem.inchOffset);
 		}
 	}
 }
