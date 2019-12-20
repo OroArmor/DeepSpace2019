@@ -1,18 +1,10 @@
 plugins {
     id "java"
     id "edu.wpi.first.GradleRIO" version "2019.4.1"
+    id 'eclipse'
 }
 
 def ROBOT_MAIN_CLASS = "org.usfirst.frc.team2412.robot.Main"
-
-sourceSets {
-    main {
-        java {
-            srcDir 'src/main/java'
-            srcDir 'library/src/main/java'
-        }
-    }
-}
 
 
 // Define my targets (RoboRIO) and artifacts (deployable files)
@@ -49,6 +41,7 @@ def includeDesktopSupport = true
 
 // Maven central needed for JUnit
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
@@ -57,8 +50,9 @@ repositories {
 dependencies {
     compile wpi.deps.wpilib()
     compile wpi.deps.vendor.java()
-    nativeZip wpi.deps.vendor.jni(wpi.platforms.roborio)
-    nativeDesktopZip wpi.deps.vendor.jni(wpi.platforms.desktop)
+    compile project(":library")
+    //nativeZip wpi.deps.vendor.jni(wpi.platforms.roborio)
+    //nativeDesktopZip wpi.deps.vendor.jni(wpi.platforms.desktop)
     testCompile 'junit:junit:4.12'
 	testCompile 'org.mockito:mockito-core:3.2.0'
 	testCompile 'net.bytebuddy:byte-buddy-agent:1.10.3'
