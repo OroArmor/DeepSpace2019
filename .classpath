@@ -36,5 +36,14 @@
 	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/net/bytebuddy/byte-buddy/1.10.3/byte-buddy-1.10.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/net/bytebuddy/byte-buddy/1.10.3/byte-buddy-1.10.3-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/net/bytebuddy/byte-buddy/1.10.3/byte-buddy-1.10.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.2/junit-jupiter-engine-5.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.2/junit-jupiter-engine-5.5.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.2/junit-jupiter-engine-5.5.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.2/junit-jupiter-params-5.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.2/junit-jupiter-params-5.5.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.2/junit-jupiter-params-5.5.2-sources.jar"/>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>

@@ -1,11 +1,17 @@
 package org.usfirst.frc.team2412.robot;
 
 import org.usfirst.frc.team2412.robot.commands.CommandBase;
+import org.usfirst.frc.team2412.robot.subsystems.LiftConstants;
+import org.usfirst.frc.team2412.robot.subsystems.LiftSubsystem;
+
+import com.robototes.control.DistanceSubsystem;
 
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 
 public class Robot extends TimedRobot {
+
+	public static LiftSubsystem liftSubsystem;
 
 	// OI for the robot
 	public static OI m_oi;
@@ -20,8 +26,11 @@ public class Robot extends TimedRobot {
 	@Override
 	public void robotInit() {
 		// Create an new OI
+
+		liftSubsystem = new LiftSubsystem(
+				new DistanceSubsystem(RobotMap.liftMotors, LiftConstants.motorRotationsToInches));
+
 		m_oi = new OI();
-		RobotMap.liftMotors[1].follow(RobotMap.liftMotors[0]);
 	}
 
 	// Called periodically in sandstorm or teleop.

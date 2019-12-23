@@ -74,7 +74,7 @@ public class LiftSubsystem extends Subsystem {
 
 		// Returns the distance from the ground to the level
 		public Distance getInch() {
-			return inch.add(increment.multiply(new Distance(level - 1))).subtract(LiftConstants.inchOffset);
+			return inch.add(increment.multiply(new Distance(level - 1)));
 		}
 	}
 }

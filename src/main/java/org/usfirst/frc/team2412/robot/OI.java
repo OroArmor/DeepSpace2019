@@ -32,13 +32,13 @@ public class OI {
 	Button hatch3 = new JoystickButton(driver, 8);
 
 	public OI() {
-		cargo1.whenPressed(new LiftSetInchCommand(LiftHeights.CARGO1, 0.1));
-		cargo2.whenPressed(new LiftSetInchCommand(LiftHeights.CARGO2, 0.1));
-		cargo3.whenPressed(new LiftSetInchCommand(LiftHeights.CARGO3, 0.1));
+		cargo1.whenPressed(new LiftSetInchCommand(Robot.liftSubsystem, LiftHeights.CARGO1, 0.1));
+		cargo2.whenPressed(new LiftSetInchCommand(Robot.liftSubsystem, LiftHeights.CARGO2, 0.1));
+		cargo3.whenPressed(new LiftSetInchCommand(Robot.liftSubsystem, LiftHeights.CARGO3, 0.1));
 
-		hatch1.whenPressed(new LiftSetInchCommand(LiftHeights.HATCH1, 0.1));
-		hatch2.whenPressed(new LiftSetInchCommand(LiftHeights.HATCH2, 0.1));
-		hatch3.whenPressed(new LiftSetInchCommand(LiftHeights.HATCH3, 0.1));
+		hatch1.whenPressed(new LiftSetInchCommand(Robot.liftSubsystem, LiftHeights.HATCH1, 0.1));
+		hatch2.whenPressed(new LiftSetInchCommand(Robot.liftSubsystem, LiftHeights.HATCH2, 0.1));
+		hatch3.whenPressed(new LiftSetInchCommand(Robot.liftSubsystem, LiftHeights.HATCH3, 0.1));
 	}
 
 }
