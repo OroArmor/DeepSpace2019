@@ -15,12 +15,12 @@
 	<classpathentry kind="lib" path="src/libs/cscore-java-2019.1.1.jar"/>
 	<classpathentry kind="lib" path="src/libs/hal-java-2019.1.1.jar"/>
 	<classpathentry kind="lib" path="src/libs/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="src/libs/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="src/libs/ntcore-java-2019.1.1.jar"/>
 	<classpathentry kind="lib" path="src/libs/opencv-java-3.4.4-4.jar"/>
 	<classpathentry kind="lib" path="src/libs/SparkMax-java-1.0.27.jar"/>
 	<classpathentry kind="lib" path="src/libs/wpilibj-java-2019.1.1.jar"/>
 	<classpathentry kind="lib" path="src/libs/wpiutil-java-2019.1.1.jar"/>
+	<classpathentry kind="lib" path="src/libs/junit-4.12.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
@@ -36,7 +36,7 @@
 	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/net/bytebuddy/byte-buddy/1.10.3/byte-buddy-1.10.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/net/bytebuddy/byte-buddy/1.10.3/byte-buddy-1.10.3-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/net/bytebuddy/byte-buddy/1.10.3/byte-buddy-1.10.3-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2.jar" sourcepath="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2-javadoc.jar"/>
 	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.2/junit-jupiter-engine-5.5.2.jar"/>

@@ -3,14 +3,20 @@ package org.usfirst.frc.team2412.robot;
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.atLeast;
+import static org.mockito.Mockito.atMost;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.reset;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.usfirst.frc.helpers.SchedulerPumpHelper.*;
+
+import org.usfirst.frc.helpers.MockButton;
+import org.usfirst.frc.helpers.MockHardwareExtension;
 import org.usfirst.frc.helpers.TestWithScheduler;
 import org.usfirst.frc.team2412.robot.commands.LiftSetInchCommand;
 import org.usfirst.frc.team2412.robot.subsystems.LiftConstants;
@@ -25,6 +31,10 @@ import com.robototes.units.InterUnitRatio;
 import com.robototes.units.UnitTypes.DistanceUnits;
 import com.robototes.units.UnitTypes.RotationUnits;
 
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.command.Scheduler;
+
+@SuppressWarnings("unused")
 public class LiftSubsystemTest extends TestWithScheduler {
 
 	static {
@@ -35,6 +45,8 @@ public class LiftSubsystemTest extends TestWithScheduler {
 
 	@Before
 	public void setupTest() {
+		MockHardwareExtension.beforeAll();
+		schedulerStart();
 		liftSubsystem = new LiftSubsystem(mock(DistanceSubsystem.class));
 	}
 
@@ -60,7 +72,7 @@ public class LiftSubsystemTest extends TestWithScheduler {
 	}
 
 	@Test
-	public void setLiftSubsystemSetsCorrectBasicSpeeds() {
+	public void testSetLiftSubsystemSetsCorrectBasicSpeeds() {
 		// Make sure that the basic calls to speed are set correctly
 		liftSubsystem.liftUp();
 		liftSubsystem.liftDown();
@@ -86,6 +98,9 @@ public class LiftSubsystemTest extends TestWithScheduler {
 
 	@Test
 	public void testCorrectLiftHeights() {
+
+		// Check if all the heights are correct
+
 		assertEquals("Lift Height cargo 1 is correct", new Distance(27.5, DistanceUnits.INCH),
 				LiftHeights.CARGO1.getInch());
 		assertEquals("Lift Height cargo 2 is correct", new Distance(55.5, DistanceUnits.INCH),
@@ -101,17 +116,43 @@ public class LiftSubsystemTest extends TestWithScheduler {
 	}
 
 	@Test
-	public void testSetRotations() throws InterruptedException {
-		try (LiftSetInchCommand liftSetCommand = new LiftSetInchCommand(liftSubsystem, LiftHeights.HATCH1, 0.1);) {
-			liftSetCommand.start();
-			runForDuration(1000);
+	public void testLiftSetInchCommand() throws InterruptedException {
+		for (LiftHeights height : LiftHeights.values()) { // Loop through all the different set heights
 
-			verify(liftSubsystem.liftDistanceSubsystem, times(1)).setReference(new Distance(0));
+			try (LiftSetInchCommand liftSetCommand = new LiftSetInchCommand(liftSubsystem, height, 0.1);
+					MockButton mockButton = new MockButton();) { // Create the button and command in a try so they auto
+																	// close
+
+				// Initialize the button and start the command so they actually run
+				liftSetCommand.start();
+				mockButton.whenPressed(liftSetCommand);
+
+				// "Push" the button and run the Scheduler
+				mockButton.push();
+				Scheduler.getInstance().run();
+
+				// "Release" the button and run the Scheduler
+				mockButton.release();
+				Scheduler.getInstance().run();
+
+				// Check if the setReference method was called
+				verify(liftSubsystem.liftDistanceSubsystem, times(1))
+						.setReference(height.getInch().subtract(LiftConstants.inchOffset));
+
+				// Check if usePID was called
+				verify(liftSubsystem.liftDistanceSubsystem, times(1)).usePID();
+
+				// Cancel the command and reset the mock for the next loop
+				liftSetCommand.cancel();
+				reset(liftSubsystem.liftDistanceSubsystem);
+			}
 		}
 	}
 
 	@After
 	public void close() {
 		liftSubsystem.close();
+		schedulerDestroy();
+		MockHardwareExtension.afterAll();
 	}
 }

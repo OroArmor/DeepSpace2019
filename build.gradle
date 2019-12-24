@@ -53,7 +53,7 @@ dependencies {
     compile project(":library")
     //nativeZip wpi.deps.vendor.jni(wpi.platforms.roborio)
     //nativeDesktopZip wpi.deps.vendor.jni(wpi.platforms.desktop)
-    testCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.9'
 	testCompile 'org.mockito:mockito-core:3.2.0'
 	testCompile 'net.bytebuddy:byte-buddy-agent:1.10.3'
 	testCompile 'net.bytebuddy:byte-buddy:1.10.3'
