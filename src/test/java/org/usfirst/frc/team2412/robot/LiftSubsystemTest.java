@@ -2,19 +2,14 @@ package org.usfirst.frc.team2412.robot;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.reset;
 import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.atLeast;
-import static org.mockito.Mockito.atMost;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.reset;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.usfirst.frc.helpers.SchedulerPumpHelper.*;
-
 import org.usfirst.frc.helpers.MockButton;
 import org.usfirst.frc.helpers.MockHardwareExtension;
 import org.usfirst.frc.helpers.TestWithScheduler;
@@ -31,10 +26,8 @@ import com.robototes.units.InterUnitRatio;
 import com.robototes.units.UnitTypes.DistanceUnits;
 import com.robototes.units.UnitTypes.RotationUnits;
 
-import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.command.Scheduler;
 
-@SuppressWarnings("unused")
 public class LiftSubsystemTest extends TestWithScheduler {
 
 	static {

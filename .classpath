@@ -7,43 +7,127 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="library/src/main/java"/>
-	<classpathentry kind="src" path="src/test/java"/>
-	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
-	<classpathentry kind="lib" path="src/libs/wpiapi-java-5.12.1.jar"/>
-	<classpathentry kind="lib" path="src/libs/api-java-5.12.1.jar"/>
-	<classpathentry kind="lib" path="src/libs/cameraserver-java-2019.1.1.jar"/>
-	<classpathentry kind="lib" path="src/libs/cscore-java-2019.1.1.jar"/>
-	<classpathentry kind="lib" path="src/libs/hal-java-2019.1.1.jar"/>
-	<classpathentry kind="lib" path="src/libs/hamcrest-core-1.3.jar"/>
-	<classpathentry kind="lib" path="src/libs/ntcore-java-2019.1.1.jar"/>
-	<classpathentry kind="lib" path="src/libs/opencv-java-3.4.4-4.jar"/>
-	<classpathentry kind="lib" path="src/libs/SparkMax-java-1.0.27.jar"/>
-	<classpathentry kind="lib" path="src/libs/wpilibj-java-2019.1.1.jar"/>
-	<classpathentry kind="lib" path="src/libs/wpiutil-java-2019.1.1.jar"/>
-	<classpathentry kind="lib" path="src/libs/junit-4.12.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+	<classpathentry kind="src" output="bin/test" path="src/test/java">
 		<attributes>
-			<attribute name="module" value="true"/>
+			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/mockito/mockito-core/3.2.0/mockito-core-3.2.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.3/byte-buddy-agent-1.10.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.3/byte-buddy-agent-1.10.3-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.3/byte-buddy-agent-1.10.3-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/net/bytebuddy/byte-buddy/1.10.3/byte-buddy-1.10.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/net/bytebuddy/byte-buddy/1.10.3/byte-buddy-1.10.3-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/net/bytebuddy/byte-buddy/1.10.3/byte-buddy-1.10.3-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2.jar" sourcepath="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.2/junit-jupiter-engine-5.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.2/junit-jupiter-engine-5.5.2-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.2/junit-jupiter-engine-5.5.2-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.2/junit-jupiter-params-5.5.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.2/junit-jupiter-params-5.5.2-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.2/junit-jupiter-params-5.5.2-sources.jar"/>
+	<classpathentry kind="con" path="org.eclipse.buildship.core.gradleclasspathcontainer"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/wpilibj-java/2019.4.1/181d600aa0815fca956ff6903748e99be9025949/wpilibj-java-2019.4.1.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpilibj/wpilibj-java/2019.4.1/ba505e826a3d95e2acc68d1c219bb55781cd2b94/wpilibj-java-2019.4.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.ntcore/ntcore-java/2019.4.1/9dd5e2cf0d5080b10e19fb88d9372a170f7a034/ntcore-java-2019.4.1.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.ntcore/ntcore-java/2019.4.1/ca376b47a204864e5bcd5b83d6219e07b42416c0/ntcore-java-2019.4.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpiutil/wpiutil-java/2019.4.1/5baa3eec5cac7654236b16afd3f0198bbe5dc946/wpiutil-java-2019.4.1.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.wpiutil/wpiutil-java/2019.4.1/9b52975ba2540ee79b4ef0d2657104867e8e61d0/wpiutil-java-2019.4.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.thirdparty.frc2019.opencv/opencv-java/3.4.4-4/5c546c223045ef680e643d97726623031831b1c5/opencv-java-3.4.4-4.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.thirdparty.frc2019.opencv/opencv-java/3.4.4-4/d433924d21ac1a7c0375495d982f61eb047484cb/opencv-java-3.4.4-4-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.cscore/cscore-java/2019.4.1/c7eee2f82bf88c65f62a042828bf0944a2a475bb/cscore-java-2019.4.1.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.cscore/cscore-java/2019.4.1/372c1bff1cae104383c1930bcda43ab9a2b8dce9/cscore-java-2019.4.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.cameraserver/cameraserver-java/2019.4.1/d0d4a27f87a6b87eeed4ddc21964a0bc6e9e372/cameraserver-java-2019.4.1.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.cameraserver/cameraserver-java/2019.4.1/e7853496f55bdfbd5142b91f916cbed6cba7372/cameraserver-java-2019.4.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.hal/hal-java/2019.4.1/fe4aec01e745838fa6997fba26b0917e35af9480/hal-java-2019.4.1.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/edu.wpi.first.hal/hal-java/2019.4.1/88dcf5f101b260d9a332f5dfe4eb373d26e70a68/hal-java-2019.4.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/com.ctre.phoenix/api-java/5.12.0/67bee152c70e47d981b1ecb1b7d6b59465aa506e/api-java-5.12.0.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/com.ctre.phoenix/api-java/5.12.0/aca8d84775394631caa2992da07e3b11f14bc513/api-java-5.12.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/com.ctre.phoenix/wpiapi-java/5.12.0/a355071240b46081f86795119258fa2ffa1401e5/wpiapi-java-5.12.0.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/com.ctre.phoenix/wpiapi-java/5.12.0/7ba7915eee25afd745d0c76be698132d71c8f519/wpiapi-java-5.12.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.m2/repository/com/revrobotics/frc/SparkMax-java/1.5.0/SparkMax-java-1.5.0.jar" sourcepath="C:/Users/s-oronae/.m2/repository/com/revrobotics/frc/SparkMax-java/1.5.0/SparkMax-java-1.5.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/junit/junit/4.9/1013627e3993319870863a020034004717505815/junit-4.9.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/junit/junit/4.9/84b903feddab2bd58f5ab2fc0c5c636df42df74d/junit-4.9-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/3.2.0/38157d5fab1b47814827773ca3dff01c60e31425/mockito-core-3.2.0.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/3.2.0/cff3e4ef83212a7e4f53fd0ac9d0abc2949ac6cb/mockito-core-3.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.10.3/d7a2b692adb0f4e204fc52fc7da998b60d8483d/byte-buddy-agent-1.10.3.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.10.3/ab3a8008c5a68a67c9d6c2f2ea59ab9a18d601e6/byte-buddy-agent-1.10.3-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.10.3/db4e5b256de8945691b863e1b2150a6834e187e/byte-buddy-1.10.3.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.10.3/fd2dc72c9425fc1a1b9cd78cafe94f2376eaba9a/byte-buddy-1.10.3-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.6/639033469776fd37c08358c6b92a4761feb2af4b/objenesis-2.6.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.6/96614f514a1031296657bf0dde452dc15e42fcb8/objenesis-2.6-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.2.0/d70083080bf3400c181562919cb03bf7588104e1/junit-jupiter-params-5.2.0.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.2.0/6ae21107276aececc279f142d8fee7734f51fc3e/junit-jupiter-params-5.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.2.0/de87318ccd3dfa1a98ebfef792d362776f1914de/junit-jupiter-engine-5.2.0.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.2.0/ad0d47eb12682e65b371f1f7eb6a284ff2716d40/junit-jupiter-engine-5.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.2.0/9cd901df48d88d8e605a6ccb2c3f140c92db6bf2/junit-jupiter-api-5.2.0.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.2.0/cde9c7381febf2edf35949808b084c982045bafa/junit-jupiter-api-5.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.1/860340562250678d1a344907ac75754e259cdb14/hamcrest-core-1.1.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.1/2ccf1154d1a8936042a8a742dc3e611d02ac7213/hamcrest-core-1.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.2.0/35fa3529ce843ada1a10b0909ccb4a8148ee638d/junit-platform-engine-1.2.0.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.2.0/1bfa9b12b39daca1113cf24c7dfa3ced520e08cd/junit-platform-engine-1.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.2.0/dbce1d822d3dc6c61703b340cd79018518685451/junit-platform-commons-1.2.0.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.2.0/bf6544529adb99bb5b81454f44ab69f5935be4af/junit-platform-commons-1.2.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/3ef5276905e36f4d8055fe3cb0bdcc7503ffc85d/apiguardian-api-1.0.0.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.0.0/777508fa9f3e03cafb3c1fb2eba3dca317f4b1ee/apiguardian-api-1.0.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.0/c8e2a3e3bc7f3e4bb5075306452db5290f9b117a/opentest4j-1.1.0.jar" sourcepath="C:/Users/s-oronae/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.1.0/80aaf67bc5cc5e749baf41b9b523f8939aaaca28/opentest4j-1.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin/default"/>
 </classpath>
